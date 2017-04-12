@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+/*
+  This is some content inserted by the ISPF-like
+  editor, oedit.
+*/
 int main(int argc, char**argv)
 {
   int i;
