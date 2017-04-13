@@ -1,13 +1,8 @@
-#include <stdio.h>
+#include "util.h"
 
-int main(int argc, char**argv)
+int main(int argc, const char* const argv[])
 {
-  int i;
-  printf("Hello, world!\n"
-         "This command is %s, and it has %d arguments\n",
-         argv[0], argc-1);
-  for (i=1; i < argc; ++i){
-    printf("[%d]: %s\n", i, argv[i]);
-  }
+  printf("Hello, world!\n");
+  showArgs(stdout, argc, argv);
   return 0;
 }
