@@ -2,7 +2,7 @@
 
 int main(int argc, const char* const argv[])
 {
-  printf("Hello, Kentucky!\n");
+  printf("Hello, world!\n");
   showArgs(stdout, argc, argv);
   return 0;
 }
