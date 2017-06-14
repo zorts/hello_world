@@ -10,3 +10,6 @@ chtag -tc1047 *.c *.h *.md
 
 # Fix the modes (this is a little dubious...)
 chmod 644 *.c *.h *.md
+
+# See if anything changed
+git status
