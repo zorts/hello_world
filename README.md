@@ -1,6 +1,6 @@
 This is a simple hello world program for testing git on z/OS.
 
-Here's a suggested scenario to see how git can with with MVS datasets:
+Here's a suggested scenario to see how git can work with with MVS datasets:
 
 * Clone this repository. If you want to push changes, fork it instead and then clone the fork.
 * cd into the repo and type `make`. This will compile and link the code and test the resulting executable.
