@@ -1,9 +1,9 @@
-#! /rsusr/local/bin/bash
+#!/bin/env bash
 
 # Copy the files
-cp -S a=.c "//'tsjlc.demo.c'" .
-cp -S a=.h "//'tsjlc.demo.h'" .
-cp -U -S a=.md "//'tsjlc.demo.txt'" .
+cp -S a=.c "//demo.c" .
+cp -S a=.h "//demo.h" .
+cp -U -S a=.md "//demo.txt" .
 
 # Fix the tags
 chtag -tc1047 *.c *.h *.md
