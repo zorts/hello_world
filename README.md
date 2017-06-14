@@ -1,6 +1,6 @@
-This is a simple hello world program for testing git on z/OS.
+This is a simple hello world program for testing git on z/OS. It's meant to be used in conjunction with [Using git for z/OS with GitHub](https://forum.rocketsoftware.com/t/using-git-for-z-os-with-github/654) on the [Rocket Community Forum](https://forum.rocketsoftware.com/categories). 
 
-Here's a suggested scenario to see how git can work with MVS datasets:
+Here's a suggested scenario demonstrating how git can work with MVS datasets:
 
 * Clone this repository. If you want to push changes, fork it instead and then clone the fork.
 * cd into the repo and type `make`. This will compile and link the code and test the resulting executable.
