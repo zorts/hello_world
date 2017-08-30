@@ -1,4 +1,6 @@
-This is a simple hello world program for testing git on z/OS. It's meant to be used in conjunction with [Using git for z/OS with GitHub](https://forum.rocketsoftware.com/t/using-git-for-z-os-with-github/654) on the [Rocket Community Forum](https://forum.rocketsoftware.com/categories). 
+This is a simple hello world program for testing git on z/OS. It's meant to be used in conjunction with
+[Using git for z/OS with GitHub](https://forum.rocketsoftware.com/t/using-git-for-z-os-with-github/654) 
+on the [Rocket Community Forum](https://forum.rocketsoftware.com/categories). 
 
 Here's a suggested scenario demonstrating how git can work with MVS datasets:
 
