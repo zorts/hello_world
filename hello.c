@@ -2,7 +2,7 @@
 
 int main(int argc, const char* const argv[])
 {
-  printf("Hello, Express Scripts programmers!\n");
+  printf("Greetings, Express Scripts programmers!\n");
   showArgs(stdout, argc, argv);
   return 0;
 }
