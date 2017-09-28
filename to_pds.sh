@@ -3,7 +3,7 @@
 # Copy the files. The "-s" option is z/OS-specific; it controls 
 # the way that file suffices are handled. In this case, "-S d="
 # is used to deleted the specified suffix, so that the member name
-# will just be the min part of the file name.
+# will just be the main part of the file name.
 #
 # For more information, see:
 #
