@@ -43,5 +43,17 @@ hello.o: hello.c
 util.o: util.c
 	$(CC) -c -o $@ $<
 
+sinka.o: sink.c
+	$(CC) -qascii -c -o $@ $<
+
+sinka: sinka.o
+	$(CC) -qascii -o $@ $^
+
+sinke.o: sink.c
+	$(CC) -qebcdic -c -o $@ $<
+
+sinke: sinke.o
+	$(CC) -qebcdic -o $@ $^
+
 clean:
-	rm -f *.o hello
+	rm -f *.o hello sinka sinke

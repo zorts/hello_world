@@ -1,0 +1,21 @@
+#!/bin/sh
+
+export _BPXK_AUTOCVT=ON
+export _CEE_RUNOPTS="FILETAG(AUTOCVT,AUTOTAG) POSIX(ON)"
+export _TAG_REDIR_OUT=txt
+
+touch ascii.txt ebcdic.txt ascii_tagged_utf8.txt ebcdic_tagged_utf8.txt
+
+chtag -tc819 ascii.txt
+echo "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" >ascii.txt
+
+iconv -F -T -t1047 ascii.txt > ebcdic.txt
+
+cp ascii.txt ascii_tagged_utf8.txt
+chtag -tcUTF-8 ascii_tagged_utf8.txt
+
+cp ebcdic.txt ebcdic_tagged_utf8.txt
+chtag -tcUTF-8 ebcdic_tagged_utf8.txt
+
+
+  
