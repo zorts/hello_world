@@ -13,3 +13,19 @@ Here's a suggested scenario demonstrating how git can work with MVS datasets:
 * When all done, run `./cleanup.sh` to delete the MVS datasets.
 
 Also present are batch job equivalents of the to_/from_pds.sh scripts.
+
+**Update:** The z/OS port of git 2.14.3 now supports the https git protocol in addition to the ssh protocol. To use this, you must set the environment variable `GIT_SSL_CAINFO` to point to a file containing the X.509 certificates of the public Certificate Authorities, in PEM format.
+
+A copy of that file, as of the time of release, is provided with the git for z/OS distribution, in `etc/cacert.pem`. A prudent security stance, though, is to download a current copy of the file from a trusted source and verify the signature of the file. A suggested source is the [`curl` web site`](https://curl.haxx.se/docs/caextract.html). If you have the Rocket ports of `curl` and `openssl` installed, you can use these commands:
+
+```
+    # Get the certificate file
+    curl -s -k https://curl.haxx.se/ca/cacert.pem -o cacert.pem
+
+    # Get the signature file and extract just the hash
+    curl -s -k https://curl.haxx.se/ca/cacert.pem.sha256 | awk ' {print $1}' > cacert.pem.sha256 
+
+    # Generate the hash on the certificate file and compare it to the signature file.
+    # If the signature matches, there will be no output from diff.
+    openssl dgst -sha256 cacert.pem | awk ' {print $2}' | diff - cacert.pem.sha256 
+```
